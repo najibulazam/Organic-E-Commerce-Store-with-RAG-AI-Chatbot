@@ -1,0 +1,181 @@
+/* Invoice Print Styles */
+
+/* Hide elements that shouldn't be printed */
+@media print {
+  /* Hide navigation, status tracker, and action buttons */
+  .no-print,
+  nav,
+  .navbar,
+  footer,
+  .breadcrumb {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  /* Remove Bootstrap card styling for print */
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+  }
+
+  .card-header {
+    background: transparent !important;
+    border: none !important;
+    padding: 0.5rem 0 !important;
+    border-bottom: 2px solid #333 !important;
+  }
+
+  .card-body {
+    padding: 0 !important;
+  }
+
+  /* Table styling for invoice */
+  .invoice-table {
+    margin-top: 1rem;
+    width: 100% !important;
+  }
+
+  .invoice-table thead {
+    background-color: #f8f9fa !important;
+    border-top: 2px solid #333 !important;
+    border-bottom: 2px solid #333 !important;
+  }
+
+  .invoice-table thead th {
+    padding: 10px !important;
+    font-weight: bold !important;
+    color: #000 !important;
+  }
+
+  .invoice-table tbody tr {
+    border-bottom: 1px solid #ddd !important;
+  }
+
+  .invoice-table tbody td {
+    padding: 10px !important;
+    vertical-align: middle !important;
+  }
+
+  /* Product images in print */
+  .invoice-table img {
+    max-width: 50px !important;
+    max-height: 50px !important;
+    border: 1px solid #ddd !important;
+  }
+
+  /* Summary section */
+  .card-body hr {
+    border-top: 2px solid #333 !important;
+  }
+
+  /* Total amount styling */
+  .text-primary {
+    color: #28a745 !important;
+    font-size: 1.2em !important;
+  }
+
+  /* Invoice header */
+  .invoice-header {
+    margin-bottom: 2rem !important;
+  }
+
+  .invoice-header h1 {
+    font-size: 2em !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .invoice-header h2 {
+    font-size: 1.8em !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Customer info box */
+  .invoice-customer {
+    border: 1px solid #333;
+    padding: 15px;
+    background: #f8f9fa;
+    margin-bottom: 2rem !important;
+  }
+
+  .invoice-customer h5 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Footer */
+  .invoice-footer {
+    margin-top: 3rem !important;
+    page-break-inside: avoid;
+  }
+
+  .invoice-footer hr {
+    border-top: 2px solid #333 !important;
+  }
+
+  /* Badge styling for print */
+  .badge {
+    border: 1px solid #333 !important;
+    padding: 0.25rem 0.5rem !important;
+    background: transparent !important;
+    color: #000 !important;
+  }
+
+  /* Container adjustments */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .row {
+    margin: 0 !important;
+  }
+
+  .col-lg-8,
+  .col-lg-4 {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Prevent page breaks inside important sections */
+  .invoice-table,
+  .invoice-customer,
+  .card {
+    page-break-inside: avoid;
+  }
+}
+
+/* Screen-only styles (default state) */
+.print-only {
+  display: none;
+}
+
+/* Invoice table hover effect (screen only) */
+.invoice-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Enhanced button styling for print action */
+.btn-success {
+  font-weight: 600;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
