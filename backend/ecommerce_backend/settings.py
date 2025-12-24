@@ -197,6 +197,8 @@ CORS_ALLOWED_ORIGINS = [
 # Add production frontend URL from environment variable
 FRONTEND_URL = os.getenv('FRONTEND_URL')
 if FRONTEND_URL:
+    # Strip trailing slash to avoid CORS errors (E014)
+    FRONTEND_URL = FRONTEND_URL.rstrip('/')
     CORS_ALLOWED_ORIGINS.append(FRONTEND_URL)
 
 CORS_ALLOW_CREDENTIALS = True
