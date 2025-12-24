@@ -1,0 +1,77 @@
+# GitHub Actions for Production Deployment
+# Optional: Use this for additional CI/CD checks
+
+name: Production Deployment Checks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        cd backend
+        pip install -r requirements.txt
+    
+    - name: Check Django configuration
+      run: |
+        cd backend
+        python manage.py check --deploy --fail-level WARNING
+      env:
+        SECRET_KEY: test-secret-key-for-ci
+        DEBUG: False
+        DATABASE_URL: sqlite:///test.db
+        CLOUDINARY_CLOUD_NAME: test
+        CLOUDINARY_API_KEY: test
+        CLOUDINARY_API_SECRET: test
+        GROQ_API_KEY: test
+    
+    - name: Run migrations (dry-run)
+      run: |
+        cd backend
+        python manage.py migrate --check
+      env:
+        SECRET_KEY: test-secret-key-for-ci
+        DEBUG: False
+        DATABASE_URL: sqlite:///test.db
+
+  frontend-checks:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm ci
+    
+    - name: Build frontend
+      run: |
+        cd frontend
+        npm run build
+      env:
+        VITE_API_URL: https://test-backend.com/api
+    
+    - name: Check build output
+      run: |
+        cd frontend
+        test -d dist && echo "✅ Build successful"

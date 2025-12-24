@@ -1,11 +1,11 @@
-asgiref==3.11.0
-Django==6.0
-django-cors-headers==4.9.0
-django-filter==25.2
-djangorestframework==3.16.1
-pillow==12.0.0
-sqlparse==0.5.5
-tzdata==2025.3
+asgiref
+Django
+django-cors-headers
+django-filter
+djangorestframework
+pillow
+sqlparse
+tzdata
 cloudinary
 django-cloudinary-storage
 python-dotenv
@@ -13,3 +13,7 @@ sentence-transformers
 numpy
 requests
 groq
+gunicorn
+dj-database-url
+psycopg2-binary
+whitenoise

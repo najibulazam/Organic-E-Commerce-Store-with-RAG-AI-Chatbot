@@ -9,6 +9,8 @@ A modern full-stack e-commerce platform featuring an **AI-powered RAG (Retrieval
 ![AI](https://img.shields.io/badge/AI-RAG%20Powered-orange?logo=openai)
 ![Groq](https://img.shields.io/badge/LLM-Groq%20Llama%203.3-blueviolet)
 
+> **🚀 Ready to Deploy?** Check out the complete [**DEPLOYMENT GUIDE**](DEPLOYMENT.md) for step-by-step instructions to deploy on Render (backend) and Netlify (frontend) - **100% FREE TIER!**
+
 ---
 
 ## 🌟 Highlights
