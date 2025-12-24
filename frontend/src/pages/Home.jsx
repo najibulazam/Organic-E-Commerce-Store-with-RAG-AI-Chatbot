@@ -57,6 +57,18 @@ function Home() {
 
   return (
     <div>
+      {/* Backend Cold Start Notice */}
+      <div className="alert alert-info mb-0 rounded-0 text-center py-2" role="alert" style={{ 
+        background: 'linear-gradient(90deg, #17a2b8 0%, #138496 100%)',
+        border: 'none',
+        color: 'white',
+        overflow: 'hidden'
+      }}>
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+          ⏱️ First load may take up to 50 seconds as our free-tier backend wakes up. Thank you for your patience! 🚀
+        </marquee>
+      </div>
+
       {/* Hero Section */}
       <section className="bg-light py-5">
         <div className="container">
