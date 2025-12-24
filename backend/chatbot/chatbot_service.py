@@ -7,7 +7,6 @@ import uuid
 from typing import Dict, List, Optional
 from django.utils import timezone
 from .models import ChatConversation, ChatMessage
-from .rag_engine import RAGEngine
 
 
 class ChatbotService:
@@ -19,7 +18,8 @@ class ChatbotService:
     """
     
     def __init__(self):
-        self.rag_engine = RAGEngine()
+        # Lazy load RAG engine to avoid startup timeout
+        self._rag_engine = None
         
         # System prompt for the chatbot
         self.system_prompt = """You are a knowledgeable e-commerce assistant for an organic products store.
@@ -53,6 +53,14 @@ Example good response:
 - **Organic Mixed Nuts** - $8.99 - Great protein and healthy fats"
 
 Never say you don't have information if relevant products appear in the Product Information section."""
+    
+    @property
+    def rag_engine(self):
+        """Lazy load RAG engine on first use to avoid startup timeout"""
+        if self._rag_engine is None:
+            from .rag_engine import RAGEngine
+            self._rag_engine = RAGEngine()
+        return self._rag_engine
     
     def get_or_create_conversation(self, session_id: Optional[str] = None, user=None) -> ChatConversation:
         """

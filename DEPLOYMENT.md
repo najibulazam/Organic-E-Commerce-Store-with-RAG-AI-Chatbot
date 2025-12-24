@@ -87,7 +87,7 @@ git push origin main
      ```
    - **Start Command**: 
      ```bash
-     gunicorn ecommerce_backend.wsgi:application --bind 0.0.0.0:$PORT
+     gunicorn ecommerce_backend.wsgi:application --bind 0.0.0.0:$PORT --timeout 120 --workers 1 --preload
      ```
    - **Plan**: **Free**
 

@@ -9,10 +9,16 @@ tzdata
 cloudinary
 django-cloudinary-storage
 python-dotenv
-sentence-transformers
+
+# AI/ML dependencies - CPU-only for free tier compatibility
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.0+cpu
+sentence-transformers==2.5.1
 numpy
 requests
 groq
+
+# Production dependencies
 gunicorn
 dj-database-url
 psycopg2-binary
