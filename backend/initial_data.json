@@ -1,0 +1,1179 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Fruits",
+    "slug": "fruits",
+    "description": "Fresh organic fruits delivered daily",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.013Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 2,
+  "fields": {
+    "name": "Vegetables",
+    "slug": "vegetables",
+    "description": "Organic vegetables from local farms",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.022Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 3,
+  "fields": {
+    "name": "Dairy & Eggs",
+    "slug": "dairy-eggs",
+    "description": "Fresh dairy products and farm eggs",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.029Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 4,
+  "fields": {
+    "name": "Meat & Seafood",
+    "slug": "meat-seafood",
+    "description": "Premium quality meat and fresh seafood",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.038Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 5,
+  "fields": {
+    "name": "Bakery",
+    "slug": "bakery",
+    "description": "Freshly baked goods daily",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.045Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 6,
+  "fields": {
+    "name": "Canned Foods",
+    "slug": "canned-foods",
+    "description": "Preserved and canned organic products",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.052Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 7,
+  "fields": {
+    "name": "Frozen Foods",
+    "slug": "frozen-foods",
+    "description": "Frozen vegetables, fruits and meals",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.058Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 8,
+  "fields": {
+    "name": "Pasta & Grains",
+    "slug": "pasta-grains",
+    "description": "Organic pasta, rice and whole grains",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.066Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 9,
+  "fields": {
+    "name": "Breakfast",
+    "slug": "breakfast",
+    "description": "Healthy breakfast cereals and spreads",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.073Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 10,
+  "fields": {
+    "name": "Snacks",
+    "slug": "snacks",
+    "description": "Healthy organic snacks",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.082Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 11,
+  "fields": {
+    "name": "Beverages",
+    "slug": "beverages",
+    "description": "Organic juices and drinks",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.089Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 12,
+  "fields": {
+    "name": "Spices & Condiments",
+    "slug": "spices-condiments",
+    "description": "Organic spices and sauces",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.096Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 13,
+  "fields": {
+    "name": "Baby Care",
+    "slug": "baby-care",
+    "description": "Organic baby food and products",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.103Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 14,
+  "fields": {
+    "name": "Health & Wellness",
+    "slug": "health-wellness",
+    "description": "Vitamins, supplements and health products",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.111Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 15,
+  "fields": {
+    "name": "Household",
+    "slug": "household",
+    "description": "Eco-friendly household items",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.119Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 16,
+  "fields": {
+    "name": "Personal Care",
+    "slug": "personal-care",
+    "description": "Natural personal care products",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.128Z"
+  }
+},
+{
+  "model": "products.category",
+  "pk": 17,
+  "fields": {
+    "name": "Pet Care",
+    "slug": "pet-care",
+    "description": "Organic pet food and supplies",
+    "image": null,
+    "created_at": "2025-12-22T10:53:53.135Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "name": "Organic Fresh Apples",
+    "slug": "organic-fresh-apples",
+    "category": 1,
+    "description": "Fresh organic apples, crisp and sweet. Perfect for snacking or baking. Grown without pesticides.",
+    "price": "4.99",
+    "discount_price": "3.99",
+    "image": "image/upload/product_images/organic-fresh-apples",
+    "stock": 150,
+    "available": true,
+    "featured": true,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.144Z",
+    "updated_at": "2025-12-23T09:56:31.580Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "name": "Organic Bananas",
+    "slug": "organic-bananas",
+    "category": 1,
+    "description": "Fresh organic bananas, naturally ripened. Rich in potassium and vitamins.",
+    "price": "2.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-bananas",
+    "stock": 200,
+    "available": true,
+    "featured": true,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.153Z",
+    "updated_at": "2025-12-23T09:56:30.204Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "name": "Organic Strawberries",
+    "slug": "organic-strawberries",
+    "category": 1,
+    "description": "Sweet and juicy organic strawberries. Perfect for desserts and smoothies.",
+    "price": "5.99",
+    "discount_price": "4.99",
+    "image": "image/upload/product_images/organic-strawberries",
+    "stock": 100,
+    "available": true,
+    "featured": true,
+    "rating": "4.90",
+    "created_at": "2025-12-22T10:53:53.159Z",
+    "updated_at": "2025-12-23T09:56:28.890Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "name": "Organic Oranges",
+    "slug": "organic-oranges",
+    "category": 1,
+    "description": "Fresh organic oranges packed with vitamin C. Perfect for juice or eating fresh.",
+    "price": "3.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-oranges",
+    "stock": 180,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.166Z",
+    "updated_at": "2025-12-23T09:56:27.420Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "name": "Organic Blueberries",
+    "slug": "organic-blueberries",
+    "category": 1,
+    "description": "Fresh organic blueberries, rich in antioxidants. Great for breakfast bowls.",
+    "price": "6.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-blueberries",
+    "stock": 80,
+    "available": true,
+    "featured": true,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.174Z",
+    "updated_at": "2025-12-23T09:56:25.865Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "name": "Organic Avocados",
+    "slug": "organic-avocados",
+    "category": 1,
+    "description": "Ripe organic avocados, perfect for toast, salads, or guacamole.",
+    "price": "4.49",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-avocados",
+    "stock": 120,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.182Z",
+    "updated_at": "2025-12-23T09:56:24.509Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "name": "Organic Grapes",
+    "slug": "organic-grapes",
+    "category": 1,
+    "description": "Sweet seedless organic grapes. Perfect for snacking or fruit salads.",
+    "price": "5.49",
+    "discount_price": null,
+    "image": "image/upload/v1766572092/ehc3txzwsohp85uimm9h.png",
+    "stock": 90,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.189Z",
+    "updated_at": "2025-12-24T10:28:13.685Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 8,
+  "fields": {
+    "name": "Organic Lemons",
+    "slug": "organic-lemons",
+    "category": 1,
+    "description": "Fresh organic lemons. Perfect for cooking, baking, or making lemonade.",
+    "price": "2.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-lemons",
+    "stock": 150,
+    "available": true,
+    "featured": false,
+    "rating": "4.40",
+    "created_at": "2025-12-22T10:53:53.197Z",
+    "updated_at": "2025-12-23T09:56:22.500Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "name": "Organic Tomatoes",
+    "slug": "organic-tomatoes",
+    "category": 2,
+    "description": "Fresh organic tomatoes, vine-ripened for maximum flavor. Perfect for salads and cooking.",
+    "price": "3.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-tomatoes",
+    "stock": 160,
+    "available": true,
+    "featured": true,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.206Z",
+    "updated_at": "2025-12-23T09:56:20.969Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 10,
+  "fields": {
+    "name": "Organic Spinach",
+    "slug": "organic-spinach",
+    "category": 2,
+    "description": "Fresh organic spinach leaves. Rich in iron and vitamins. Great for salads and smoothies.",
+    "price": "2.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-spinach",
+    "stock": 140,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.215Z",
+    "updated_at": "2025-12-23T09:56:19.555Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 11,
+  "fields": {
+    "name": "Organic Carrots",
+    "slug": "organic-carrots",
+    "category": 2,
+    "description": "Crunchy organic carrots. Perfect for snacking, juicing, or cooking.",
+    "price": "2.49",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-carrots",
+    "stock": 180,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.221Z",
+    "updated_at": "2025-12-23T09:56:18.241Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 12,
+  "fields": {
+    "name": "Organic Broccoli",
+    "slug": "organic-broccoli",
+    "category": 2,
+    "description": "Fresh organic broccoli crowns. Packed with nutrients and fiber.",
+    "price": "3.49",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-broccoli",
+    "stock": 100,
+    "available": true,
+    "featured": true,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.229Z",
+    "updated_at": "2025-12-23T09:56:16.936Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 13,
+  "fields": {
+    "name": "Organic Bell Peppers",
+    "slug": "organic-bell-peppers",
+    "category": 2,
+    "description": "Colorful organic bell peppers. Sweet and crunchy, perfect for any dish.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-bell-peppers",
+    "stock": 110,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.238Z",
+    "updated_at": "2025-12-23T09:56:15.314Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 14,
+  "fields": {
+    "name": "Organic Cucumbers",
+    "slug": "organic-cucumbers",
+    "category": 2,
+    "description": "Fresh and crisp organic cucumbers. Great for salads and snacking.",
+    "price": "2.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-cucumbers",
+    "stock": 130,
+    "available": true,
+    "featured": false,
+    "rating": "4.40",
+    "created_at": "2025-12-22T10:53:53.245Z",
+    "updated_at": "2025-12-23T09:56:13.641Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 15,
+  "fields": {
+    "name": "Organic Lettuce",
+    "slug": "organic-lettuce",
+    "category": 2,
+    "description": "Crisp organic lettuce. Perfect base for fresh salads.",
+    "price": "2.49",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-lettuce",
+    "stock": 120,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.252Z",
+    "updated_at": "2025-12-23T09:56:12.201Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "name": "Organic Potatoes",
+    "slug": "organic-potatoes",
+    "category": 2,
+    "description": "Fresh organic potatoes. Versatile for any cooking method.",
+    "price": "3.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-potatoes",
+    "stock": 200,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.259Z",
+    "updated_at": "2025-12-23T09:56:10.326Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 17,
+  "fields": {
+    "name": "Organic Whole Milk",
+    "slug": "organic-whole-milk",
+    "category": 3,
+    "description": "Fresh organic whole milk from grass-fed cows. Rich and creamy.",
+    "price": "5.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-whole-milk",
+    "stock": 80,
+    "available": true,
+    "featured": true,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.267Z",
+    "updated_at": "2025-12-23T09:56:08.966Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 18,
+  "fields": {
+    "name": "Organic Free-Range Eggs",
+    "slug": "organic-free-range-eggs",
+    "category": 3,
+    "description": "Organic free-range eggs. Fresh and nutritious. Dozen pack.",
+    "price": "6.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-free-range-eggs",
+    "stock": 100,
+    "available": true,
+    "featured": true,
+    "rating": "4.90",
+    "created_at": "2025-12-22T10:53:53.274Z",
+    "updated_at": "2025-12-23T09:56:07.747Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "name": "Organic Greek Yogurt",
+    "slug": "organic-greek-yogurt",
+    "category": 3,
+    "description": "Creamy organic Greek yogurt. High in protein, perfect for breakfast.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-greek-yogurt",
+    "stock": 90,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.281Z",
+    "updated_at": "2025-12-23T09:56:05.784Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 20,
+  "fields": {
+    "name": "Organic Cheddar Cheese",
+    "slug": "organic-cheddar-cheese",
+    "category": 3,
+    "description": "Sharp organic cheddar cheese. Perfect for sandwiches and snacking.",
+    "price": "7.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-cheddar-cheese",
+    "stock": 70,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.290Z",
+    "updated_at": "2025-12-23T09:56:04.222Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 21,
+  "fields": {
+    "name": "Organic Butter",
+    "slug": "organic-butter",
+    "category": 3,
+    "description": "Creamy organic butter from grass-fed cows. Perfect for cooking and baking.",
+    "price": "5.49",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-butter",
+    "stock": 85,
+    "available": true,
+    "featured": false,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.297Z",
+    "updated_at": "2025-12-23T09:56:02.972Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 22,
+  "fields": {
+    "name": "Organic Chicken Breast",
+    "slug": "organic-chicken-breast",
+    "category": 4,
+    "description": "Fresh organic chicken breast. Lean and tender. Perfect for grilling.",
+    "price": "12.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-chicken-breast",
+    "stock": 60,
+    "available": true,
+    "featured": true,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.305Z",
+    "updated_at": "2025-12-23T09:56:01.488Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 23,
+  "fields": {
+    "name": "Wild Caught Salmon",
+    "slug": "wild-caught-salmon",
+    "category": 4,
+    "description": "Fresh wild-caught salmon. Rich in omega-3 fatty acids.",
+    "price": "16.99",
+    "discount_price": "14.99",
+    "image": "image/upload/product_images/wild-caught-salmon",
+    "stock": 40,
+    "available": true,
+    "featured": true,
+    "rating": "4.90",
+    "created_at": "2025-12-22T10:53:53.312Z",
+    "updated_at": "2025-12-23T09:55:59.938Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 24,
+  "fields": {
+    "name": "Grass-Fed Ground Beef",
+    "slug": "grass-fed-ground-beef",
+    "category": 4,
+    "description": "Premium grass-fed ground beef. Perfect for burgers and meals.",
+    "price": "13.99",
+    "discount_price": null,
+    "image": "image/upload/v1766572068/ai4stnhr5naujzu5ka7i.png",
+    "stock": 50,
+    "available": true,
+    "featured": false,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.319Z",
+    "updated_at": "2025-12-24T10:27:49.263Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 25,
+  "fields": {
+    "name": "Organic Whole Wheat Bread",
+    "slug": "organic-whole-wheat-bread",
+    "category": 5,
+    "description": "Fresh baked organic whole wheat bread. Perfect for sandwiches and toast.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-whole-wheat-bread",
+    "stock": 100,
+    "available": true,
+    "featured": true,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.326Z",
+    "updated_at": "2025-12-23T09:55:58.794Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 26,
+  "fields": {
+    "name": "Organic Sourdough Bread",
+    "slug": "organic-sourdough-bread",
+    "category": 5,
+    "description": "Artisan organic sourdough bread. Naturally fermented for better digestion.",
+    "price": "6.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-sourdough-bread",
+    "stock": 70,
+    "available": true,
+    "featured": false,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.333Z",
+    "updated_at": "2025-12-23T09:55:57.393Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 27,
+  "fields": {
+    "name": "Organic Croissants",
+    "slug": "organic-croissants",
+    "category": 5,
+    "description": "Buttery organic croissants. Freshly baked every morning.",
+    "price": "5.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-croissants",
+    "stock": 60,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.341Z",
+    "updated_at": "2025-12-23T09:55:56.069Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 28,
+  "fields": {
+    "name": "Organic Frozen Berries Mix",
+    "slug": "organic-frozen-berries-mix",
+    "category": 7,
+    "description": "Mixed organic frozen berries. Perfect for smoothies and desserts.",
+    "price": "7.99",
+    "discount_price": null,
+    "image": "image/upload/v1766572002/y7wntnsim0rfb6vo4wyl.png",
+    "stock": 80,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.350Z",
+    "updated_at": "2025-12-24T10:26:43.277Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 29,
+  "fields": {
+    "name": "Organic Frozen Vegetables",
+    "slug": "organic-frozen-vegetables",
+    "category": 7,
+    "description": "Mixed organic frozen vegetables. Convenient and nutritious.",
+    "price": "5.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-frozen-vegetables",
+    "stock": 100,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.357Z",
+    "updated_at": "2025-12-23T09:55:54.589Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 30,
+  "fields": {
+    "name": "Organic Whole Wheat Pasta",
+    "slug": "organic-whole-wheat-pasta",
+    "category": 8,
+    "description": "Organic whole wheat pasta. High in fiber and protein.",
+    "price": "3.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-whole-wheat-pasta",
+    "stock": 120,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.364Z",
+    "updated_at": "2025-12-23T09:55:53.247Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 31,
+  "fields": {
+    "name": "Organic Brown Rice",
+    "slug": "organic-brown-rice",
+    "category": 8,
+    "description": "Premium organic brown rice. Healthy and nutritious.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-brown-rice",
+    "stock": 110,
+    "available": true,
+    "featured": true,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.372Z",
+    "updated_at": "2025-12-23T09:55:51.731Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 32,
+  "fields": {
+    "name": "Organic Quinoa",
+    "slug": "organic-quinoa",
+    "category": 8,
+    "description": "Organic quinoa. Complete protein source and gluten-free.",
+    "price": "7.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-quinoa",
+    "stock": 80,
+    "available": true,
+    "featured": false,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.381Z",
+    "updated_at": "2025-12-23T09:55:50.419Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 33,
+  "fields": {
+    "name": "Organic Oatmeal",
+    "slug": "organic-oatmeal",
+    "category": 9,
+    "description": "Organic rolled oats. Perfect for a healthy breakfast.",
+    "price": "5.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-oatmeal",
+    "stock": 100,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.388Z",
+    "updated_at": "2025-12-23T09:55:49.200Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 34,
+  "fields": {
+    "name": "Organic Granola",
+    "slug": "organic-granola",
+    "category": 9,
+    "description": "Crunchy organic granola with nuts and honey. Perfect with yogurt.",
+    "price": "6.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-granola",
+    "stock": 90,
+    "available": true,
+    "featured": true,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.396Z",
+    "updated_at": "2025-12-23T09:55:47.801Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 35,
+  "fields": {
+    "name": "Organic Honey",
+    "slug": "organic-honey",
+    "category": 9,
+    "description": "Pure organic honey from local beekeepers. Natural sweetener.",
+    "price": "8.99",
+    "discount_price": null,
+    "image": "image/upload/v1766484254/phs6ankkk2l4cznsedtm.jpg",
+    "stock": 70,
+    "available": true,
+    "featured": false,
+    "rating": "4.90",
+    "created_at": "2025-12-22T10:53:53.404Z",
+    "updated_at": "2025-12-23T10:04:15.235Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 36,
+  "fields": {
+    "name": "Organic Mixed Nuts",
+    "slug": "organic-mixed-nuts",
+    "category": 10,
+    "description": "Premium organic mixed nuts. Healthy snacking option.",
+    "price": "9.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-mixed-nuts",
+    "stock": 80,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.413Z",
+    "updated_at": "2025-12-23T09:55:45.677Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 37,
+  "fields": {
+    "name": "Organic Trail Mix",
+    "slug": "organic-trail-mix",
+    "category": 10,
+    "description": "Organic trail mix with nuts, seeds, and dried fruits.",
+    "price": "7.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-trail-mix",
+    "stock": 90,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.420Z",
+    "updated_at": "2025-12-23T09:55:44.295Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 38,
+  "fields": {
+    "name": "Organic Popcorn",
+    "slug": "organic-popcorn",
+    "category": 10,
+    "description": "Organic non-GMO popcorn kernels. Perfect for movie nights.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-popcorn",
+    "stock": 100,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.428Z",
+    "updated_at": "2025-12-23T09:55:42.872Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 39,
+  "fields": {
+    "name": "Organic Orange Juice",
+    "slug": "organic-orange-juice",
+    "category": 11,
+    "description": "Fresh squeezed organic orange juice. 100% pure and natural.",
+    "price": "6.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-orange-juice",
+    "stock": 80,
+    "available": true,
+    "featured": true,
+    "rating": "4.80",
+    "created_at": "2025-12-22T10:53:53.436Z",
+    "updated_at": "2025-12-23T09:55:41.329Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 40,
+  "fields": {
+    "name": "Organic Green Tea",
+    "slug": "organic-green-tea",
+    "category": 11,
+    "description": "Premium organic green tea. Rich in antioxidants.",
+    "price": "5.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-green-tea",
+    "stock": 90,
+    "available": true,
+    "featured": false,
+    "rating": "4.70",
+    "created_at": "2025-12-22T10:53:53.443Z",
+    "updated_at": "2025-12-23T09:55:39.913Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 41,
+  "fields": {
+    "name": "Organic Almond Milk",
+    "slug": "organic-almond-milk",
+    "category": 11,
+    "description": "Creamy organic almond milk. Dairy-free alternative.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-almond-milk",
+    "stock": 100,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.451Z",
+    "updated_at": "2025-12-23T09:55:38.527Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 42,
+  "fields": {
+    "name": "Organic Olive Oil",
+    "slug": "organic-olive-oil",
+    "category": 12,
+    "description": "Extra virgin organic olive oil. Cold-pressed for maximum flavor.",
+    "price": "1.99",
+    "discount_price": null,
+    "image": "image/upload/product_images/organic-olive-oil",
+    "stock": 60,
+    "available": true,
+    "featured": true,
+    "rating": "4.90",
+    "created_at": "2025-12-22T10:53:53.458Z",
+    "updated_at": "2025-12-23T09:55:37.146Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 43,
+  "fields": {
+    "name": "Organic Sea Salt",
+    "slug": "organic-sea-salt",
+    "category": 12,
+    "description": "Pure organic sea salt. Rich in minerals.",
+    "price": "3.99",
+    "discount_price": null,
+    "image": "image/upload/v1766484192/ntztdkjmeezvfoklsd8o.jpg",
+    "stock": 120,
+    "available": true,
+    "featured": false,
+    "rating": "4.50",
+    "created_at": "2025-12-22T10:53:53.467Z",
+    "updated_at": "2025-12-23T10:03:13.403Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 44,
+  "fields": {
+    "name": "Organic Black Pepper",
+    "slug": "organic-black-pepper",
+    "category": 12,
+    "description": "Premium organic black pepper. Freshly ground for best flavor.",
+    "price": "4.99",
+    "discount_price": null,
+    "image": "image/upload/v1766483952/wsqc2gkwnhc0rv4bzjiy.jpg",
+    "stock": 100,
+    "available": true,
+    "featured": false,
+    "rating": "4.60",
+    "created_at": "2025-12-22T10:53:53.473Z",
+    "updated_at": "2025-12-23T09:59:13.247Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 1,
+  "fields": {
+    "first_name": "Najib",
+    "last_name": "Mahi",
+    "email": "najibul.azm@gmail.com",
+    "phone": "01978264938",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "postal_code": "5400",
+    "country": "Bangladesh",
+    "total_amount": "34.94",
+    "status": "pending",
+    "created_at": "2025-12-22T11:28:38.918Z",
+    "updated_at": "2025-12-22T11:28:38.918Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 2,
+  "fields": {
+    "first_name": "Najib",
+    "last_name": "Mahi",
+    "email": "najibul.azm@gmail.com",
+    "phone": "01978264938",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "postal_code": "5400",
+    "country": "Bangladesh",
+    "total_amount": "25.96",
+    "status": "pending",
+    "created_at": "2025-12-22T11:29:12.239Z",
+    "updated_at": "2025-12-22T11:29:12.239Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 3,
+  "fields": {
+    "first_name": "Najib",
+    "last_name": "Mahi",
+    "email": "najibul.azm@gmail.com",
+    "phone": "01978264938",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "postal_code": "5400",
+    "country": "Bangladesh",
+    "total_amount": "6.99",
+    "status": "delivered",
+    "created_at": "2025-12-22T11:36:40.313Z",
+    "updated_at": "2025-12-22T11:50:20.128Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 4,
+  "fields": {
+    "first_name": "Najib",
+    "last_name": "Mahi",
+    "email": "najibul.azm@gmail.com",
+    "phone": "01978264938",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "postal_code": "5400",
+    "country": "Bangladesh",
+    "total_amount": "6.99",
+    "status": "delivered",
+    "created_at": "2025-12-22T12:14:59.009Z",
+    "updated_at": "2025-12-22T12:28:30.330Z"
+  }
+},
+{
+  "model": "orders.order",
+  "pk": 5,
+  "fields": {
+    "first_name": "Najib",
+    "last_name": "Mahi",
+    "email": "najibul.azm@gmail.com",
+    "phone": "01978264938",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "postal_code": "5400",
+    "country": "Bangladesh",
+    "total_amount": "9.99",
+    "status": "cancelled",
+    "created_at": "2025-12-22T12:25:27.938Z",
+    "updated_at": "2025-12-22T12:26:12.525Z"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "phone": null,
+    "profile_image": null,
+    "address": null,
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "country": null,
+    "created_at": "2025-12-22T11:59:10.713Z",
+    "updated_at": "2025-12-24T10:25:14.153Z"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "phone": "01521721890",
+    "profile_image": "image/upload/v1766484345/n0fnkiiecfgrqa6qk5hv.jpg",
+    "address": "Home No. 9/A, Road No. 9, Dhap Engineer Para, Rangpur Sadar, Rangpur",
+    "city": "Rangpur",
+    "state": null,
+    "zip_code": "5400",
+    "country": "Bangladesh",
+    "created_at": "2025-12-22T12:09:02.930Z",
+    "updated_at": "2025-12-23T10:05:46.817Z"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 4,
+  "fields": {
+    "user": 4,
+    "phone": "01521721890",
+    "profile_image": "image/upload/v1766511044/bupszidwuzleduudizdl.png",
+    "address": "",
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "country": null,
+    "created_at": "2025-12-22T13:51:43.429Z",
+    "updated_at": "2025-12-23T17:30:45.165Z"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 5,
+  "fields": {
+    "user": 5,
+    "phone": "01111111111",
+    "profile_image": "image/upload/v1766515547/etjzejw8dyuymigq1mdg.jpg",
+    "address": null,
+    "city": null,
+    "state": null,
+    "zip_code": null,
+    "country": null,
+    "created_at": "2025-12-23T18:45:22.586Z",
+    "updated_at": "2025-12-23T18:45:49.018Z"
+  }
+}
+]
