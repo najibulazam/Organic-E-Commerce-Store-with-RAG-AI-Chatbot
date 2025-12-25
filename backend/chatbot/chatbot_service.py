@@ -58,8 +58,14 @@ Never say you don't have information if relevant products appear in the Product 
     def rag_engine(self):
         """Lazy load RAG engine on first use to avoid startup timeout"""
         if self._rag_engine is None:
-            from .rag_engine import RAGEngine
-            self._rag_engine = RAGEngine()
+            # Try to use lightweight RAG engine to avoid memory issues on free tier
+            try:
+                from .rag_engine import RAGEngine
+                self._rag_engine = RAGEngine()
+            except Exception as e:
+                print(f"Warning: Could not load RAG engine ({e}). Using lightweight search instead.")
+                from .rag_engine_lite import RAGEngineLite
+                self._rag_engine = RAGEngineLite()
         return self._rag_engine
     
     def get_or_create_conversation(self, session_id: Optional[str] = None, user=None) -> ChatConversation:

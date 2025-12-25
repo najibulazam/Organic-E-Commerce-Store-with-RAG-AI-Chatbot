@@ -8,7 +8,6 @@ from django.core.management.base import BaseCommand
 from django.db import transaction
 from products.models import Product, Category
 from chatbot.models import KnowledgeBase
-from chatbot.rag_engine import RAGEngine
 import time
 
 
@@ -21,6 +20,11 @@ class Command(BaseCommand):
             action='store_true',
             help='Delete existing knowledge base and rebuild',
         )
+        parser.add_argument(
+            '--lite',
+            action='store_true',
+            help='Use lightweight mode without embeddings (for memory-constrained environments)',
+        )
     
     def handle(self, *args, **options):
         self.stdout.write(self.style.SUCCESS('🤖 Building Chatbot Knowledge Base...'))
@@ -31,23 +35,42 @@ class Command(BaseCommand):
             KnowledgeBase.objects.all().delete()
         
         # Initialize RAG engine for embedding generation
-        self.stdout.write('📚 Initializing RAG engine...')
-        rag_engine = RAGEngine()
+        use_lite = options.get('lite', False)
+        
+        if use_lite:
+            self.stdout.write('📚 Using lightweight mode (no embeddings)...')
+            from chatbot.rag_engine_lite import RAGEngineLite
+            rag_engine = RAGEngineLite()
+        else:
+            try:
+                self.stdout.write('📚 Initializing RAG engine with embeddings...')
+                from chatbot.rag_engine import RAGEngine
+                rag_engine = RAGEngine()
+            except Exception as e:
+                self.stdout.write(self.style.WARNING(f'⚠️  Could not load full RAG engine: {e}'))
+                self.stdout.write('   Falling back to lightweight mode...')
+                from chatbot.rag_engine_lite import RAGEngineLite
+                rag_engine = RAGEngineLite()
+                use_lite = True
         
         # Build knowledge base
-        self._generate_product_knowledge(rag_engine)
-        self._generate_category_knowledge(rag_engine)
-        self._generate_faq_knowledge(rag_engine)
+        self._generate_product_knowledge(rag_engine, use_lite)
+        self._generate_category_knowledge(rag_engine, use_lite)
+        self._generate_faq_knowledge(rag_engine, use_lite)
         
         # Summary
         total_entries = KnowledgeBase.objects.count()
-        entries_with_embeddings = KnowledgeBase.objects.exclude(embedding__isnull=True).count()
-        
-        self.stdout.write(self.style.SUCCESS(f'\n✅ Knowledge Base Built Successfully!'))
-        self.stdout.write(f'   Total Entries: {total_entries}')
-        self.stdout.write(f'   With Embeddings: {entries_with_embeddings}')
+        if not use_lite:
+            entries_with_embeddings = KnowledgeBase.objects.exclude(embedding__isnull=True).count()
+            self.stdout.write(self.style.SUCCESS(f'\n✅ Knowledge Base Built Successfully!'))
+            self.stdout.write(f'   Total Entries: {total_entries}')
+            self.stdout.write(f'   With Embeddings: {entries_with_embeddings}')
+        else:
+            self.stdout.write(self.style.SUCCESS(f'\n✅ Knowledge Base Built Successfully (Lite Mode)!'))
+            self.stdout.write(f'   Total Entries: {total_entries}')
+            self.stdout.write(f'   Mode: Keyword-based search (no embeddings)')
     
-    def _generate_product_knowledge(self, rag_engine):
+    def _generate_product_knowledge(self, rag_engine, use_lite=False):
         """Generate knowledge base entries from products"""
         self.stdout.write('\n📦 Processing Products...')
         
@@ -57,9 +80,13 @@ class Command(BaseCommand):
             # Create detailed product description for knowledge base
             content = self._create_product_content(product)
             
-            # Generate embedding
-            self.stdout.write(f'   Embedding: {product.name[:40]}...')
-            embedding = rag_engine.generate_embedding(content)
+            # Generate embedding only if not in lite mode
+            if not use_lite:
+                self.stdout.write(f'   Embedding: {product.name[:40]}...')
+                embedding = rag_engine.generate_embedding(content)
+            else:
+                self.stdout.write(f'   Adding: {product.name[:40]}...')
+                embedding = None
             
             # Save to knowledge base
             KnowledgeBase.objects.create(
@@ -104,7 +131,7 @@ class Command(BaseCommand):
         
         return content
     
-    def _generate_category_knowledge(self, rag_engine):
+    def _generate_category_knowledge(self, rag_engine, use_lite=False):
         """Generate knowledge base entries from categories"""
         self.stdout.write('\n🏷️  Processing Categories...')
         
@@ -128,9 +155,13 @@ class Command(BaseCommand):
                 content += "Popular items: "
                 content += ", ".join([p.name for p in popular_products])
             
-            # Generate embedding
-            self.stdout.write(f'   Embedding: {category.name}')
-            embedding = rag_engine.generate_embedding(content)
+            # Generate embedding only if not in lite mode
+            if not use_lite:
+                self.stdout.write(f'   Embedding: {category.name}')
+                embedding = rag_engine.generate_embedding(content)
+            else:
+                self.stdout.write(f'   Adding: {category.name}')
+                embedding = None
             
             # Save to knowledge base
             KnowledgeBase.objects.create(
@@ -146,7 +177,7 @@ class Command(BaseCommand):
         
         self.stdout.write(self.style.SUCCESS(f'   ✓ Processed {categories.count()} categories'))
     
-    def _generate_faq_knowledge(self, rag_engine):
+    def _generate_faq_knowledge(self, rag_engine, use_lite=False):
         """Generate knowledge base entries from FAQs"""
         self.stdout.write('\n❓ Processing FAQs...')
         
@@ -217,9 +248,13 @@ class Command(BaseCommand):
         for faq in faqs:
             content = f"Q: {faq['question']}\n\nA: {faq['answer']}"
             
-            # Generate embedding
-            self.stdout.write(f'   Embedding: {faq["question"][:40]}...')
-            embedding = rag_engine.generate_embedding(content)
+            # Generate embedding only if not in lite mode
+            if not use_lite:
+                self.stdout.write(f'   Embedding: {faq["question"][:40]}...')
+                embedding = rag_engine.generate_embedding(content)
+            else:
+                self.stdout.write(f'   Adding: {faq["question"][:40]}...')
+                embedding = None
             
             # Save to knowledge base
             KnowledgeBase.objects.create(
