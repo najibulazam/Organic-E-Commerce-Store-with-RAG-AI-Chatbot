@@ -52,9 +52,6 @@ function Home() {
     alert(`${product.name} added to cart!`);
   };
 
-  if (loading) return <Loading />;
-  if (error) return <ErrorMessage message={error} />;
-
   return (
     <div>
       {/* Backend Cold Start Notice */}
@@ -68,6 +65,12 @@ function Home() {
           ⏱️ First load may take up to 50 seconds as our free-tier backend wakes up. Thank you for your patience! 🚀
         </marquee>
       </div>
+
+      {loading && <Loading />}
+      {error && <ErrorMessage message={error} />}
+      
+      {!loading && !error && (
+        <>
 
       {/* Hero Section */}
       <section className="bg-light py-5">
@@ -167,6 +170,8 @@ function Home() {
           </div>
         </div>
       </section>
+        </>
+      )}
     </div>
   );
 }
