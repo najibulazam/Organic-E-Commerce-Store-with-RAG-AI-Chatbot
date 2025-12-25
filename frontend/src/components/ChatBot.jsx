@@ -22,6 +22,12 @@ const ChatBot = () => {
           role: 'assistant',
           content: "👋 Hi! I'm your organic store assistant. I can help you with:\n\n• Product information (prices, stock, ratings)\n• Product recommendations\n• Shipping and delivery questions\n• Returns and refunds\n• Order tracking\n• Payment options\n\nWhat can I help you with today?",
           timestamp: new Date()
+        },
+        {
+          role: 'assistant',
+          content: "⚠️ **Note**: The AI chatbot may not work on the live demo due to 512MB RAM limitations on the free hosting tier. For full functionality, please clone and test locally:\n\n🔗 **GitHub**: [https://github.com/najibulazam/Organic-E-Commerce-Store-with-RAG-AI-Chatbot](https://github.com/najibulazam/Organic-E-Commerce-Store-with-RAG-AI-Chatbot)",
+          timestamp: new Date(),
+          isWarning: true
         }
       ]);
     }
@@ -89,7 +95,7 @@ const ChatBot = () => {
       
       const errorMessage = {
         role: 'assistant',
-        content: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment.",
+        content: "❌ **Connection Error**: The AI chatbot is currently unavailable due to 512MB RAM limitations on the free hosting tier.\n\n**To test the full AI chatbot functionality:**\n\n1. Clone the repository: [https://github.com/najibulazam/Organic-E-Commerce-Store-with-RAG-AI-Chatbot](https://github.com/najibulazam/Organic-E-Commerce-Store-with-RAG-AI-Chatbot)\n2. Follow the setup instructions in the README\n3. Run locally with your own API keys\n\nAll other features (shopping, cart, checkout) work perfectly on this live demo! 🛍️",
         timestamp: new Date(),
         isError: true
       };
@@ -163,7 +169,7 @@ const ChatBot = () => {
             {messages.map((message, index) => (
               <div 
                 key={index} 
-                className={`chatbot-message ${message.role} ${message.isError ? 'error' : ''}`}
+                className={`chatbot-message ${message.role} ${message.isError ? 'error' : ''} ${message.isWarning ? 'warning' : ''}`}
               >
                 <div className="message-content">
                   <ReactMarkdown
@@ -201,7 +207,7 @@ const ChatBot = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {messages.length === 1 && (
+          {messages.length === 2 && (
             <div className="quick-questions">
               <p>Quick questions:</p>
               {quickQuestions.map((question, index) => (

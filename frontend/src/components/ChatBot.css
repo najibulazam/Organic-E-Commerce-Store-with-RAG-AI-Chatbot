@@ -208,6 +208,23 @@
   color: #c53030;
 }
 
+.chatbot-message.warning .message-content {
+  background: #fffbeb;
+  border-color: #fbbf24;
+  color: #92400e;
+  font-size: 13px;
+}
+
+.message-content a {
+  color: #3182ce;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.message-content a:hover {
+  color: #2c5282;
+}
+
 .message-content p {
   margin: 0;
   margin-bottom: 8px;
