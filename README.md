@@ -887,8 +887,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Md Najibul Azam**
+**Md Najib Ul Azam Mahi**
 - GitHub: [@najibulazam](https://github.com/najibulazam)
+- LinkedIn: [najibulazam](https://linkedin.com/in/najibulazam)
 - Project Repo: [Organic E-Commerce Store with RAG AI Chatbot](https://github.com/najibulazam/Organic-E-Commerce-Store-with-RAG-AI-Chatbot)
 - Email: azam.mdnajibul@gmail.com
 
@@ -1025,7 +1026,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Md Najib Ul Azam Mahi**
 - GitHub: [@najibulazam](https://github.com/najibulazam)
 - LinkedIn: [najibulazam](https://linkedin.com/in/najibulazam)
 
